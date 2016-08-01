@@ -818,8 +818,7 @@ Here is a quick list of some apps I use, and that you might find useful as well.
 - [Slack](https://slack.com/downloads) :  Used in almost all organizations for internal team collobration.
 - [Gitter](https://gitter.im/apps) : Similar to slack.
 - [Mou](http://25.io/mou/) : For writing files in markdown syntax. Similar to simplenote , but i started using this first.
-- [Fugu](https://sourceforge.net/projects/fugussh/files/) : For tar/zip file extraction
-- [keka](http://www.kekaosx.com/en/) : Similar to Fugu
+- [keka](http://www.kekaosx.com/en/) : Tar/zip file extraction though inbuilt archive utility works
 - [OpenOffice](https://www.openoffice.org/porting/mac/) : If you are editing any microsoft office documents/Ppts . **Open Source**
 - [WireShark](https://www.wireshark.org/download.html) : For analyzing the network data
 - [TunnelBlick](https://tunnelblick.net/downloads.html) : For VPN connectivity
