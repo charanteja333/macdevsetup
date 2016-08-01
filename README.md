@@ -25,6 +25,7 @@ The steps below were tested on **OS X El Capitan**
 - [Ruby and RVM](#ruby-and-rvm)
 - [LESS](#less) **Not required**
 - [Heroku](#heroku) **Not required**
+- [AWSCLI](#awscli)
 - [MongoDB](#mongodb)
 - [Redis](#redis)
 - [Elasticsearch](#elasticsearch)
@@ -216,7 +217,7 @@ Just like the terminal, let's configure our editor a little. Go to **Sublime Tex
     "word_wrap": false
 }```
     
-Feel free to tweak these to your preference. When done, save the file and close it. I use to 
+Feel free to tweak these to your preference. When done, save the file and close it. I use the Flatland Monkai theme.
 
 
 Now for the color. I'm going to change two things: the **Theme** (which is how the tabs, the file explorer on the left, etc. look) and the **Color Scheme** (the colors of the code). Again, feel free to pick different ones, or stick with the default.
@@ -696,6 +697,42 @@ Once the key business is done, you're ready to deploy apps! Heroku has a great [
     $ heroku logs -t
     
 The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resources, so be sure to check it out!
+
+## AWSCLI
+
+AWSCLI is required for making API requests to AWS apart from boto3 to test the features.
+
+###Install
+
+Installing is very easy through pip 
+    $ pip install awscli
+    $ pip install boto3
+
+###Configuration
+
+AWS configuration files:
+
+ - **.aws/config** can have mutiple profiles to select the regions and output format . Sample contents:
+
+```
+[default]
+output = text
+region = us-east-1
+[profile OWN]
+output = text
+region = us-west-2 
+```
+- **.aws/credential** can have mutiple profiles similar to config file. This file contains the AWS keys.
+
+```
+[default]
+aws_access_key_id =
+aws_secret_access_key =
+```
+
+### Usage
+
+**aws ec2 describe-instances** - Will list the ec2 instances as per the configuration
 
 ## MongoDB
 
