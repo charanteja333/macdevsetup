@@ -704,7 +704,8 @@ AWSCLI is required for making API requests to AWS apart from boto3 to test the f
 
 ###Install
 
-Installing is very easy through pip 
+Installing is very easy through pip :
+
     $ pip install awscli
     $ pip install boto3
 
