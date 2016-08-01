@@ -1,0 +1,11 @@
+[user]
+	name = 
+	email = 
+[credential]
+	helper = osxkeychain
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore
+[push]
+	default = simple

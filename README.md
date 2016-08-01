@@ -1,19 +1,17 @@
 # Mac OS X Dev Setup
 
-This document describes how I set up my developer environment on a new MacBook or iMac. We will set up [Node](http://nodejs.org/) (JavaScript), [Python](http://www.python.org/), and [Ruby](http://www.ruby-lang.org/) environments, mainly for JavaScript and Python development. Even if you don't program in all three, it is good to have them as many command-line tools use one of them. As you read  and follow these steps, feel free to send me any feedback or comments you may have.
+This document describes how I set up environment on a new MacBook or iMac. Thanks to  [nicolashery](https://github.com/nicolashery/mac-dev-setup) for reference to start with .
 
-The document assumes you are new to Mac. The steps below were tested on **OS X Mountain Lion**.
+The steps below were tested on **OS X El Capitan**
 
-If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/nicolahery)!
 
 - [System update](#system-update)
 - [System preferences](#system-preferences)
 - [Google Chrome](#google-chrome)
 - [iTerm2](#iterm2)
 - [Homebrew](#homebrew)
-- [Consolas](#consolas)
+- [Consolas](#consolas) **Not required**
 - [Beautiful terminal](#beautiful-terminal)
-- [iTerm2](#iterm2)
 - [Git](#git)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
@@ -22,11 +20,11 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [IPython](#ipython)
 - [Numpy and Scipy](#numpy-and-scipy)
 - [MySQL](#mysql)
-- [Node.js](#nodejs)
-- [JSHint](#jshint)
+- [Node.js](#nodejs) 
+- [JSHint](#jshint) **Not required**
 - [Ruby and RVM](#ruby-and-rvm)
-- [LESS](#less)
-- [Heroku](#heroku)
+- [LESS](#less) **Not required**
+- [Heroku](#heroku) **Not required**
 - [MongoDB](#mongodb)
 - [Redis](#redis)
 - [Elasticsearch](#elasticsearch)
@@ -35,7 +33,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 
 ## System update
 
-First thing you need to do, on any OS actually, is update the system! For that: **Apple Icon > Software Update...**
+First thing you need to do, on any OS actually, is update the system! For that: **Apple Icon > About This Mac > Software Update...**
 
 ## System preferences
 
@@ -46,27 +44,23 @@ In **Apple Icon > System Preferences**:
 - Trackpad > Tap to click
 - Keyboard > Key Repeat > Fast (all the way to the right)
 - Keyboard > Delay Until Repeat > Short (all the way to the right)
-- Dock > Automatically hide and show the Dock
+- Dock > Uncheck magnification and optimize the size
 
 ## Google Chrome
 
-Install your favorite browser, mine happens to be Chrome.
-
-Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
+Install chrome though it eats up the RAM. Safari is not compatible with few websites due to few updates of **El Capitan** 
 
 ## iTerm2
 
-Since we're going to be spending a lot of time in the command-line, let's install a better terminal than the default one. Download and install [iTerm2](http://www.iterm2.com/) (the newest version, even if it says "beta release").
+Since we're going to be spending a lot of time in the command-line, let's install a better terminal than the default one. Download and install [iTerm2](http://www.iterm2.com/). Newest stable build is 3.0.5
 
 In **Finder**, drag and drop the **iTerm** Application file into the **Applications** folder.
 
 You can now launch iTerm, through the **Launchpad** for instance.
 
-Let's just quickly change some preferences. In **iTerm > Preferences...**, under the tab **General**, uncheck **Confirm closing multiple sessions** and **Confirm "Quit iTerm2 (Cmd+Q)" command** under the section **Closing**.
-
 In the tab **Profiles**, create a new one with the "+" icon, and rename it to your first name for example. Then, select **Other Actions... > Set as Default**. Finally, under the section **Window**, change the size to something better, like **Columns: 125** and **Rows: 35**.
 
-When done, hit the red "X" in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.
+
 
 ## Homebrew
 
@@ -79,8 +73,6 @@ An important dependency before Homebrew can work is the **Command Line Tools** f
 Now, Xcode weights something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode. To do this you need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
 
 Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
-
-**Note**: If you are running **OS X 10.9 Mavericks**, then you can install the Xcode Command Line Tools directly from the command line with `$ xcode-select --install`, and you don't have to go through the download page and the questionnaire.
 
 Finally, we can install Hombrew! In the terminal paste the following line (without the `$`), hit **Enter**, and follow the steps on the screen:
 
@@ -126,9 +118,9 @@ To see what you have installed (with their version numbers):
 
     $ brew list --versions
 
-## Consolas
+## Consolas ( **Not mandatory. Not a fan of consolas** )
 
-I really like the Consolas font for coding. Being a Microsoft (!) font, it is not installed by default. Since we're going to be looking at a lot of terminal output and code, let's install it now.
+Since we're going to be looking at a lot of terminal output and code, let's install it now.
 
 There are two ways we can install it. If you bought **Microsoft Office for Mac**, install that and Consolas will be installed as well.
 
@@ -147,9 +139,9 @@ And click **Install Font**. Thanks to Alexander Zhuravlev for his [post](http://
 
 ## Beautiful terminal
 
-Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place. What follows might seem like a lot of work, but trust me, it'll make the development experience so much better.
+Since we spend so much time in the terminal, we should try to make it a more pleasant and colorful place. 
 
-Let's go ahead and start by changing the font. In **iTerm > Preferences...**, under the tab **Profiles**, section **Text**, change both fonts to **Consolas 13pt**.
+Let's go ahead and start by changing the font. In **iTerm > Preferences...**, under the tab **Profiles**, section **Text**, change both fonts to **Source code pro 14pt**.
 
 Now let's add some color. I'm a big fan of the [Solarized](http://ethanschoonover.com/solarized) color scheme. It is supposed to be scientifically optimal for the eyes. I just find it pretty.
 
@@ -160,22 +152,14 @@ Scroll down the page and download the latest version. Unzip the archive. In it y
 
 **Note**: You don't have to do this, but there is one color in the **Solarized Dark** preset I don't agree with, which is *Bright Black*. You'll notice it's too close to *Black*. So I change it to be the same as *Bright Yellow*, i.e. **R 83 G 104 B 112**.
 
-Not a lot of colors yet. We need to tweak a little bit our Unix user's profile for that. This is done (on OS X and Linux), in the `~/.bash_profile` text file (`~` stands for the user's home directory).
+Not a lot of colors yet. We need to tweak a little bit our Unix user's profile for that.
 
-We'll come back to the details of that later, but for now, just download the files [.bash_profile](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile), [.bash_prompt](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt), [.aliases](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases) attached to this document into your home directory (`.bash_profile` is the one that gets loaded, I've set it up to call the others):
+- Install ohmyzsh on the terminal [OhmyZsh](https://github.com/robbyrussell/oh-my-zsh). It contains lot of plugins and themes
+- Edit .zshrc in home directory and change the theme to **garyblessington** or **gozilla** . I like both of them 
 
-    $ cd ~
-    $ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile
-    $ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt
-    $ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases
-    
-With that, open a new terminal tab (Cmd+T) and see the change! Try the list commands: `ls`, `ls -lh` (aliased to `ll`), `ls -lha` (aliased to `la`).
-
-At this point you can also change your computer's name, which shows up in this terminal prompt. If you want to do so, go to **System Preferences** > **Sharing**. For example, I changed mine from "Nicolas's MacBook Air" to just "MacBook Air", so it shows up as `MacBook-Air` in the terminal.
+At this point you can also change your computer's name, which shows up in this terminal prompt. If you want to do so, go to **System Preferences** > **Sharing**.
 
 Now we have a terminal we can work with!
-
-(Thanks to Mathias Bynens for his awesome [dotfiles](https://github.com/mathiasbynens/dotfiles).)
 
 ## Git
 
@@ -189,14 +173,8 @@ When done, to test that it installed fine you can run:
     
 And `$ which git` should output `/usr/local/bin/git`.
 
-Let's set up some basic configuration. Download the [.gitconfig](https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.gitconfig) file to your home directory:
 
-    $ cd ~
-    $ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.gitconfig
-
-It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
-
-Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
+Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/):
 
     $ git config --global user.name "Your Name Here"
     $ git config --global user.email "your_email@youremail.com"
@@ -208,60 +186,54 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
     $ git config --global credential.helper osxkeychain
     
 **Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](https://github.com/nicolashery/mac-dev-setup/blob/master/.gitignore) file for inspiration.
-    
+    $ git config --global core.excludesfile '~/.gitignore' 
+
 ## Sublime Text
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
 
 Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
-**Note**: At this point I'm going to create a shortcut on the OS X Dock for both for Sublime Text and iTerm. To do so, right-click on the running application and select **Options > Keep in Dock**.
-
-Sublime Text is not free, but I think it has an unlimited "evaluation period". Anyhow, we're going to be using it so much that even the seemingly expensive $70 price tag is worth every penny. If you can afford it, I suggest you [support](http://www.sublimetext.com/buy) this awesome tool. :)
 
 Just like the terminal, let's configure our editor a little. Go to **Sublime Text 2 > Preferences > Settings - User** and paste the following in the file that just opened:
 
-```json
-{
-    "font_face": "Consolas",
-    "font_size": 13,
+```{
+    "color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
+    "font_size": 10,
+    "highlight_line": true,
+    "highlight_modified_tabs": true,
+    "ignored_packages":
+    [
+        "Vintage"
+    ],
+    "indent_to_bracket": true,
     "rulers":
     [
-        79
+        90
     ],
-    "highlight_line": true,
-    "bold_folder_labels": true,
-    "highlight_modified_tabs": true,
     "tab_size": 2,
     "translate_tabs_to_spaces": true,
-    "word_wrap": false,
-    "indent_to_bracket": true
+    "word_wrap": false
 }
+
 ```
     
-Feel free to tweak these to your preference. When done, save the file and close it.
+Feel free to tweak these to your preference. When done, save the file and close it. I use to 
 
-I use tab size 2 for everything except Python and Markdown files, where I use tab size 4. If you have a Python and Markdown file handy (or create dummy ones with `$ touch dummy.py`), for each one, open it and go to **Sublime Text 2 > Preferences > Settings - More > Syntax Specific - User** to paste in:
-
-```json
-{
-    "tab_size": 4
-}
-```
 
 Now for the color. I'm going to change two things: the **Theme** (which is how the tabs, the file explorer on the left, etc. look) and the **Color Scheme** (the colors of the code). Again, feel free to pick different ones, or stick with the default.
 
-A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). To install it, run:
+A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). To install it, run **Not required** :
 
     $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
     $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
     
-Then go to **Sublime Text 2 > Preferences > Settings - User** and add the following two lines:
-
+Then go to **Sublime Text 2 > Preferences > Settings - User** and replace the two following lines:
+    
     "theme": "Soda Dark.sublime-theme",
     "soda_classic_tabs": true
 
-Restart Sublime Text for all changes to take effect (Note: on the Mac, closing all windows doesn't close the application, you need to hit **Cmd+Q**).
+Restart Sublime Text for all changes to take effect. 
 
 The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. But to be consistent with my terminal, I like to use the **Solarized** Color Scheme, which already ships with Sublime Text. To use it, just go to **Sublime Text 2 > Preferences > Color Scheme > Solarized (Dark)**. Again, this is really according to personal flavors, so pick what you want.
 
@@ -284,15 +256,12 @@ Now I can open a file with `$ subl myfile.py` or start a new project in the curr
 
 Sublime Text is very extensible. For now we'll leave it like that, we already have a solid installation. To add more in the future, a good place to start would be to install the [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation).
 
-## Vim
+## Vim **Not required**
 
 Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
 
-For example, when you run a Git commit, it will open Vim to allow you to type the commit message.
-
-I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
-
 Vim's default settings aren't great, and you could spend a lot of time tweaking your configuration (the `.vimrc` file). But if you're like me and just use Vim occasionally, you'll be happy to know that [Tim Pope](https://github.com/tpope) has put together some sensible defaults to quickly get started.
+
 
 First, install [pathogen.vim](https://github.com/tpope/vim-pathogen) by running:
 
@@ -499,7 +468,7 @@ In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Wor
 
 You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
 
-## Node.js
+## Node.js **Not required**
 
 Install [Node.js](http://nodejs.org/) with Homebrew:
 
@@ -557,7 +526,7 @@ To uninstall a package:
 
     $ npm uninstall <package>
 
-##JSHint
+##JSHint **Not required**
 
 JSHint is a JavaScript developer's best friend. 
 
@@ -579,7 +548,7 @@ When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Versi
 
     $ curl -L https://get.rvm.io | bash -s stable --ruby
     
-When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.bash_profile`:
+When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.zshrc`:
 
 ```bash
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -653,7 +622,7 @@ I mainly use Ruby for the CSS pre-processor [Compass](http://compass-style.org/)
 
     $ gem install compass --no-document
 
-## LESS
+## LESS **Not required**
 
 CSS preprocessors are becoming quite popular, the most popular processors are [LESS](http://lesscss.org/) and [SASS](http://sass-lang.com). Preprocessing is a lot like compiling code for CSS. It allows you to reuse CSS in many different ways. Let's start out with using LESS as a basic preprocessor, it's used by a lot of popular CSS frameworks like [Bootstrap](http://getbootstrap.com/).
 
@@ -687,7 +656,7 @@ The two options are the "input" and "output" files for the compiler. The command
 
 Read more about LESS on their page here: http://lesscss.org/
 
-## Heroku
+## Heroku **Not required**
 
 [Heroku](http://www.heroku.com/), if you're not already familiar with it, is a [Platform-as-a-Service](http://en.wikipedia.org/wiki/Platform_as_a_service) (PaaS) that makes it really easy to deploy your apps online. There are other similar solutions out there, but Heroku was among the first and is currently the most popular. Not only does it make a developer's life easier, but I find that having Heroku deployment in mind when building an app forces you to follow modern app development [best practices](http://www.12factor.net/).
 
@@ -838,20 +807,38 @@ Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of 
 
 ## Projects folder
 
-This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/Projects`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Documents`.
+This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/git`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Documents`.
 
 ## Apps
 
-Here is a quick list of some apps I use, and that you might find useful as well:
+Here is a quick list of some apps I use, and that you might find useful as well.
 
-- [Dropbox](https://www.dropbox.com/): File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
-- [Google Drive](https://drive.google.com/): File syncing to the cloud too! I use Google Docs a lot to collaborate with others (edit a document with multiple people in real-time!), and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
-- [1Password](https://agilebits.com/onepassword): Allows you to securely store your login and passwords. Even if you only use a few different passwords (they say you shouldn't!), this is really handy to keep track of all the accounts you sign up for! Also, they have a mobile app so you always have all your passwords with you (syncs with Dropbox). A little pricey though. There are free alternatives. **($50 for Mac app, $18 for iOS app)**
-- [Marked](http://markedapp.com/): As a developer, most of the stuff you write ends up being in [Markdown](http://daringfireball.net/projects/markdown/). In fact, this `README.md` file (possibly the most important file of a GitHub repo) is indeed in Markdown, written in Sublime Text, and I use Marked to preview the results everytime I save. **($4)**
-- [Path Finder](http://cocoatech.com/pathfinder/): I love OSX, it's Unix so great for developers, and all of it just works and looks pretty! Only thing I "miss" from Windows (OMG what did he say?), is a decent file explorer. I think Finder is a pain to use. So I gladly paid for this alternative, but I understand others might find it expensive just to not have to use Finder. **($40)**
-- [Evernote](https://evernote.com/): If I don't write something down, I'll forget it. As a developer, you learn so many new things every day, and technology keeps changing, it would be insane to want to keep it all in your head. So take notes, sync them to the cloud, and have them on all your devices. To be honest, I switched to [Simplenote](http://simplenote.com/) because I only take text notes, and I got tired of Evernote putting extra spaces between paragraphs when I copy & pasted into other applications. Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
-- [Moom](http://manytricks.com/moom/): Don't waste time resizing and moving your windows. Moom makes this very easy. **($10)**
+- [Dropbox](https://www.dropbox.com/) : File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
+- [Google Drive](https://drive.google.com/) : File syncing to the cloud too! I use Google Docs a lot to collaborate with others (edit a document with multiple people in real-time!), and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
+- [Evernote](https://evernote.com/) : If I don't write something down, I'll forget it. So take notes, sync them to the cloud, and have them on all your devices. I use Notes for text that are not be synced . You may also like  [Simplenote](http://simplenote.com/). Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
+- [AdobeReader](http://www.adobe.com/support/downloads/product.jsp?product=10&platform=Macintosh): Though i like preview for document viewing , i prefer using adobe reader for all my PDF docuements . Dont forget to set the default app for PDF files to adobe reader.**Right click on file -> Get info -> Open with **
+- [Slack](https://slack.com/downloads) :  Used in almost all organizations for internal team collobration.
+- [Gitter](https://gitter.im/apps) : Similar to slack.
+- [Mou](http://25.io/mou/) : For writing files in markdown syntax. Similar to simplenote , but i started using this first.
+- [Fugu](https://sourceforge.net/projects/fugussh/files/) : For tar/zip file extraction
+- [keka](http://www.kekaosx.com/en/) : Similar to Fugu
+- [OpenOffice](https://www.openoffice.org/porting/mac/) : If you are editing any microsoft office documents/Ppts . **Open Source**
+- [WireShark](https://www.wireshark.org/download.html) : For analyzing the network data
+- [TunnelBlick](https://tunnelblick.net/downloads.html) : For VPN connectivity
+- [TunnelBear](https://www.tunnelbear.com/download) : Similar to TunnelBlick . But never used it.
+- [RemoteDesktopConnection](https://www.microsoft.com/en-in/download/details.aspx?id=18140) : To access windows machines from mac
+- [OrackeVirtualBox](https://www.virtualbox.org/wiki/Downloads) : To create local VM's for testing . **Opensource**
+- [MicrosoftSilverLight](https://www.microsoft.com/getsilverlight/) : Some of the webisites/apps require this extension to be installed
+- [MozillaFirefox](https://www.mozilla.org/en-US/firefox/new/) 
 
+I have few personal apps installed as well for daily use.
+
+- [Kindle](http://www.amazon.com/gp/kindle/mac/download)
+- [Skype](https://www.skype.com/en/download-skype/skype-for-computer/)
+- [GooglePhotos](https://photos.google.com/apps)
+- [Feedly](https://itunes.apple.com/in/app/feedly.-read-more-know-more./id865500966?mt=12) : For daily updates on various topics
+- [VLC Player](http://www.videolan.org/vlc/download-macosx.html)
+- [Steam](http://store.steampowered.com/about/) : For playing games
 
 
 
