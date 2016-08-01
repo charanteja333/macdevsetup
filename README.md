@@ -214,9 +214,7 @@ Just like the terminal, let's configure our editor a little. Go to **Sublime Tex
     "tab_size": 2,
     "translate_tabs_to_spaces": true,
     "word_wrap": false
-}
-
-```
+}```
     
 Feel free to tweak these to your preference. When done, save the file and close it. I use to 
 
