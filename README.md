@@ -850,13 +850,13 @@ This really depends on how you want to organize your files, but I like to put al
 Here is a quick list of some apps I use, and that you might find useful as well.
 
 - [Dropbox](https://www.dropbox.com/) : File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
-- [Google Drive](https://drive.google.com/) : File syncing to the cloud too! I use Google Docs a lot to collaborate with others (edit a document with multiple people in real-time!), and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
-- [Evernote](https://evernote.com/) : If I don't write something down, I'll forget it. So take notes, sync them to the cloud, and have them on all your devices. I use Notes for text that are not be synced . You may also like  [Simplenote](http://simplenote.com/). Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
+- [Google Drive](https://www.google.co.in/drive/download/) : File syncing to the cloud too!  and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
+- [Evernote](https://evernote.com/) : Take notes and sync them to the cloud, and have them on all your devices. I use Notes for text that are not be synced . You may also like  [Simplenote](http://simplenote.com/). Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
 - [AdobeReader](http://www.adobe.com/support/downloads/product.jsp?product=10&platform=Macintosh): Though i like preview for document viewing , i prefer using adobe reader for all my PDF docuements . Dont forget to set the default app for PDF files to adobe reader.**Right click on file -> Get info -> Open with **
 - [Slack](https://slack.com/downloads) :  Used in almost all organizations for internal team collobration.
 - [Gitter](https://gitter.im/apps) : Similar to slack.
 - [Mou](http://25.io/mou/) : For writing files in markdown syntax. Similar to simplenote , but i started using this first.
-- [keka](http://www.kekaosx.com/en/) : Tar/zip file extraction though inbuilt archive utility works
+- [Keka](http://www.kekaosx.com/en/) : Tar/zip file extraction though inbuilt archive utility works
 - [OpenOffice](https://www.openoffice.org/porting/mac/) : If you are editing any microsoft office documents/Ppts . **Open Source**
 - [WireShark](https://www.wireshark.org/download.html) : For analyzing the network data
 - [TunnelBlick](https://tunnelblick.net/downloads.html) : For VPN connectivity
