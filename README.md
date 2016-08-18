@@ -862,7 +862,7 @@ Here is a quick list of some apps I use, and that you might find useful as well.
 - [TunnelBlick](https://tunnelblick.net/downloads.html) : For VPN connectivity
 - [TunnelBear](https://www.tunnelbear.com/download) : Similar to TunnelBlick . But never used it.
 - [RemoteDesktopConnection](https://www.microsoft.com/en-in/download/details.aspx?id=18140) : To access windows machines from mac
-- [OrackeVirtualBox](https://www.virtualbox.org/wiki/Downloads) : To create local VM's for testing . **Opensource**
+- [OracleVirtualBox](https://www.virtualbox.org/wiki/Downloads) : To create local VM's for testing . **Opensource**
 - [MicrosoftSilverLight](https://www.microsoft.com/getsilverlight/) : Some of the webisites/apps require this extension to be installed
 - [MozillaFirefox](https://www.mozilla.org/en-US/firefox/new/) 
 
