@@ -220,16 +220,8 @@ Restart Sublime Text for all changes to take effect.
 
 The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. **Solarized** Color Scheme is good, which already ships with Sublime Text. To use it, just go to **Sublime Text > Preferences > Color Scheme > Solarized (Dark)**. 
 
-Sublime Text 2 already supports syntax highlighting for a lot of languages. I'm going to install a couple that are missing:
 
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
-    $ git clone https://github.com/jashkenas/coffee-script-tmbundle CoffeeScript
-    $ git clone https://github.com/miksago/jade-tmbundle Jade
-    $ git clone https://github.com/danro/LESS-sublime.git LESS
-    $ git clone -b SublimeText2 https://github.com/kuroir/SCSS.tmbundle.git SCSS
-    $ git clone https://github.com/nrw/sublime-text-handlebars Handlebars
-
-Let's create a shortcut so we can launch Sublime Text from the command-line:
+Create a shortcut so we can launch Sublime Text from the command-line:
 
     $ ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
@@ -237,7 +229,7 @@ Now I can open a file with `$ subl myfile.py` or start a new project in the curr
 
 Sublime Text is very extensible. For now we'll leave it like that, we already have a solid installation. To add more in the future, a good place to start would be to install the [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation).
 
-## Vim **Not required**
+## Vim
 
 Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
 
@@ -344,7 +336,6 @@ It will get installed in the `venv` folder, and not conflict with other projects
 
 **Important**: Remember to add `venv` to your project's `.gitignore` file so you don't include all of that in your source code!
 
-As mentioned earlier, I like to install big packages (like Numpy), or packages I always use (like IPython) globally. All the rest I install in a virtualenv.
 
 ## IPython
 
@@ -362,7 +353,8 @@ It may take a few minutes to build these.
 
 Once it's done, we can install IPython with all the available options:
 
-    $ pip install ipython[zmq,qtconsole,notebook,test]
+    $ pip install ipython
+    $ pip install qtconsole
 
 ### Usage
 
@@ -370,12 +362,7 @@ You can launch IPython from the command line with `$ ipython`, but what's more i
 
     $ ipython qtconsole
     
-You can also customize the font it uses:
-
-    $ ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=13
-    
-And since I'm lazy and I don't want to type or copy & paste that all the time, I'm going to create an alias for it. Create a `.extra` text file in your home directory with `$ subl ~/.extra` (I've set up `.bash_profile` to load `.extra`), and add the following line:
-
+Y
 ```bash
 alias ipy='ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=13'
 ```
@@ -443,13 +430,13 @@ To connect with the command-line client, run:
 
 **Note**: By default, the MySQL user `root` has no password. It doesn't really matter for a local development database. If you wish to change it though, you can use `$ mysqladmin -u root password 'new-password'`.
 
-### MySQL Workbench
+### MySQL Workbench **Not Required**
 
 In terms of a GUI client for MySQL, I'm used to the official and free [MySQL Workbench](http://www.mysql.com/products/workbench/). But feel free to use whichever you prefer.
 
 You can find the MySQL Workbench download [here](http://www.mysql.com/downloads/workbench/). (**Note**: It will ask you to sign in, you don't need to, just click on "No thanks, just start my download!" at the bottom.)
 
-## Node.js **Not required**
+## Node.js 
 
 Install [Node.js](http://nodejs.org/) with Homebrew:
 
@@ -529,7 +516,7 @@ When installing Ruby, best practice is to use [RVM](https://rvm.io/) (Ruby Versi
 
     $ curl -L https://get.rvm.io | bash -s stable --ruby
     
-When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.zshrc`:
+When it is done, both RVM and a fresh version of Ruby 2.0 are installed. The following line was also automatically added to your `.zshrc`. If not please add it.
 
 ```bash
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -829,7 +816,7 @@ This really depends on how you want to organize your files, but I like to put al
 
 ## Apps
 
-Here is a quick list of some apps I use, and that you might find useful as well.
+Here is a quick list of some apps I use.
 
 - [Dropbox](https://www.dropbox.com/) : File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
 - [Google Drive](https://www.google.co.in/drive/download/) : File syncing to the cloud too!  and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
@@ -852,10 +839,11 @@ I have few personal apps installed as well for daily use.
 
 - [Kindle](http://www.amazon.com/gp/kindle/mac/download)
 - [Skype](https://www.skype.com/en/download-skype/skype-for-computer/)
-- [GooglePhotos](https://photos.google.com/apps)
+- [GooglePhotos](https://photos.google.com/apps) - To sync photos
 - [Feedly](https://itunes.apple.com/in/app/feedly.-read-more-know-more./id865500966?mt=12) : For daily updates on various topics
 - [VLC Player](http://www.videolan.org/vlc/download-macosx.html)
 - [Steam](http://store.steampowered.com/about/) : For playing games
+- [WhatsApp](https://www.whatsapp.com/download/) :  For whatsapp usage
 
 
 
