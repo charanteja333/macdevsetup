@@ -10,7 +10,6 @@ The steps below were tested on **OS X El Capitan**
 - [Google Chrome](#google-chrome)
 - [iTerm2](#iterm2)
 - [Homebrew](#homebrew)
-- [Consolas](#consolas) **Not required**
 - [Beautiful terminal](#beautiful-terminal)
 - [Git](#git)
 - [Sublime Text](#sublime-text)
@@ -119,24 +118,6 @@ To see what you have installed (with their version numbers):
 
     $ brew list --versions
 
-## Consolas ( **Not mandatory. Not a fan of consolas** )
-
-Since we're going to be looking at a lot of terminal output and code, let's install it now.
-
-There are two ways we can install it. If you bought **Microsoft Office for Mac**, install that and Consolas will be installed as well.
-
-If you don't have Office, follow these steps:
-
-    $ brew install cabextract
-    $ cd ~/Downloads
-    $ mkdir consolas
-    $ cd consolas
-    $ curl -O http://download.microsoft.com/download/f/5/a/f5a3df76-d856-4a61-a6bd-722f52a5be26/PowerPointViewer.exe
-    $ cabextract PowerPointViewer.exe
-    $ cabextract ppviewer.cab
-    $ open CONSOLA*.TTF
-
-And click **Install Font**. Thanks to Alexander Zhuravlev for his [post](http://blog.ikato.com/post/15675823000/how-to-install-consolas-font-on-mac-os-x).
 
 ## Beautiful terminal
 
@@ -196,11 +177,11 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
 
-Just like the terminal, let's configure our editor a little. Go to **Sublime Text 2 > Preferences > Settings - User** and paste the following in the file that just opened:
+Just like the terminal, let's configure our editor a little. Go to **Sublime Text > Preferences > Settings - User** and paste the following in the file that just opened:
 
 ```{
-    "color_scheme": "Packages/Theme - Flatland/Flatland Monokai.tmTheme",
-    "font_size": 10,
+    "color_scheme": "Packages/Color Scheme - Default/Sunburst.tmTheme",
+    "font_size": 12,
     "highlight_line": true,
     "highlight_modified_tabs": true,
     "ignored_packages":
@@ -212,29 +193,32 @@ Just like the terminal, let's configure our editor a little. Go to **Sublime Tex
     [
         90
     ],
+    
     "tab_size": 2,
     "translate_tabs_to_spaces": true,
-    "word_wrap": false
+    "word_wrap": true
 }```
     
-Feel free to tweak these to your preference. When done, save the file and close it. I use the Flatland Monkai theme.
+Feel free to tweak these to your preference. When done, save the file and close it. I use the sunburst colour scheme.
 
 
 Now for the color. I'm going to change two things: the **Theme** (which is how the tabs, the file explorer on the left, etc. look) and the **Color Scheme** (the colors of the code). Again, feel free to pick different ones, or stick with the default.
 
-A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). To install it, run **Not required** :
+A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). To install it, run  :
 
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
     $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
+
+Copy the Theme-Soda folder and go to **Sublime Text > Preferences > Browse Packages..** . Paste the Theme-Soda folder to the folder and restart sublime
     
-Then go to **Sublime Text 2 > Preferences > Settings - User** and replace the two following lines:
+Then go to **Sublime Text > Preferences > Settings - User** and replace the two following lines:
     
-    "theme": "Soda Dark.sublime-theme",
+    "theme": "Soda Dark 3.sublime-theme",
+    "soda_folder_icons": true,
     "soda_classic_tabs": true
 
 Restart Sublime Text for all changes to take effect. 
 
-The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. But to be consistent with my terminal, I like to use the **Solarized** Color Scheme, which already ships with Sublime Text. To use it, just go to **Sublime Text 2 > Preferences > Color Scheme > Solarized (Dark)**. Again, this is really according to personal flavors, so pick what you want.
+The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. **Solarized** Color Scheme is good, which already ships with Sublime Text. To use it, just go to **Sublime Text > Preferences > Color Scheme > Solarized (Dark)**. 
 
 Sublime Text 2 already supports syntax highlighting for a lot of languages. I'm going to install a couple that are missing:
 
@@ -247,9 +231,7 @@ Sublime Text 2 already supports syntax highlighting for a lot of languages. I'm 
 
 Let's create a shortcut so we can launch Sublime Text from the command-line:
 
-    $ cd ~
-    $ mkdir bin
-    $ ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
+    $ ln -s "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
 Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
 
