@@ -233,26 +233,22 @@ Sublime Text is very extensible. For now we'll leave it like that, we already ha
 
 Although Sublime Text will be our main editor, it is a good idea to learn some very basic usage of [Vim](http://www.vim.org/). It is a very popular text editor inside the terminal, and is usually pre-installed on any Unix system.
 
-Vim's default settings aren't great, and you could spend a lot of time tweaking your configuration (the `.vimrc` file). But if you're like me and just use Vim occasionally, you'll be happy to know that [Tim Pope](https://github.com/tpope) has put together some sensible defaults to quickly get started.
+Vim's default settings aren't great, and you could spend a lot of time tweaking your configuration (the `.vimrc` file). 
 
+My Vim configuration steps are below:
 
 First, install [pathogen.vim](https://github.com/tpope/vim-pathogen) by running:
 
     $ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
         curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-Then create a file `~/.vimrc` (you can use `$ subl ~/.vimrc`), and paste in the following:
+Second, install vim package manager vundle by running:
 
-    execute pathogen#infect()
-    syntax on
-    filetype plugin indent on
+    $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-And finally, install the Vim "sensible defaults" by running:
+Then create a file `~/.vimrc` and add the contents of `.vimrc` in dotfiles directory.After copying the contents,
+install the plugins mentioned in `.vimrc` file by executing `:PluginInstall` .
 
-    $ cd ~/.vim/bundle
-    $ git clone git://github.com/tpope/vim-sensible.git
-
-With that, Vim will look a lot better next time you open it!
 
 ## Python
 
