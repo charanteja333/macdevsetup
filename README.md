@@ -3,7 +3,7 @@
 This document describes how I set up environment on a new MacBook or iMac. Thanks to  [nicolashery](https://github.com/nicolashery/mac-dev-setup) for reference to start with .
 
 The steps below were tested on **OS X El Capitan**
-i
+
 
 - [System update](#system-update)
 - [System preferences](#system-preferences)
