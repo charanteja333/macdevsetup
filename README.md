@@ -33,7 +33,7 @@ The steps below were tested on **OS X El Capitan**
 
 ## System update
 
-First thing you need to do, on any OS actually, is update the system! For that: **Apple Icon > About This Mac > Software Update...**
+First thing you need to do, on any OS actually, is update the system. For that: **Apple Icon > About This Mac > Software Update...**
 
 ## System preferences
 
