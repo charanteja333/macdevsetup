@@ -178,7 +178,7 @@ Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file,
 
 Just like the terminal, let's configure our editor a little.
 
-Now for the color scheme, i use solalrized dark . I'm going to change the **Theme** (which is how the tabs, the file explorer on the left, etc. look) and the **Color Scheme** (the colors of the code). Again, feel free to pick different ones, or stick with the default.
+For the **Color Scheme** (the colors of the code), i use solarized dark . I'm going to change the **Theme** (which is how the tabs, the file explorer on the left, etc. look) . Again, feel free to pick different ones, or stick with the default.
 
 A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). To install it, run  :
 
@@ -192,7 +192,7 @@ Create a shortcut so we can launch Sublime Text from the command-line:
 
     $ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 
-Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
+Now I can open a file with `$ subl myfile.py` .
 
 Sublime Text is very extensible. We need to install few things to make it more comfortable working with python.
 
