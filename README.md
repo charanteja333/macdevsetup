@@ -221,13 +221,7 @@ Vim's default settings aren't great, and you could spend a lot of time tweaking 
 
 My Vim configuration steps are below:
 
-First, install [pathogen.vim](https://github.com/tpope/vim-pathogen) by running:
-
-    $ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-        curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
-Second, install vim package manager vundle by running:
-
+First, install vim package manager vundle by running:
     $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 Then create a file `~/.vimrc` and add the contents of `.vimrc` in dotfiles directory.After copying the contents,
