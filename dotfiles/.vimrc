@@ -4,7 +4,6 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 "git interface
 Plugin 'tpope/vim-fugitive'
@@ -18,11 +17,6 @@ Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 
 "html
-"  isnowfy only compatible with python not python3
-Plugin 'isnowfy/python-vim-instant-markdown'
-Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'suan/vim-instant-markdown'
-Plugin 'nelstrom/vim-markdown-preview'
 "python syntax checker
 Plugin 'nvie/vim-flake8'
 Plugin 'vim-scripts/Pydiction'
@@ -31,8 +25,7 @@ Plugin 'scrooloose/syntastic'
 
 "auto-completion stuff
 "Plugin 'klen/python-mode'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'klen/rope-vim'
+"Plugin 'klen/rope-vim'
 "Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 ""code folding
@@ -49,14 +42,20 @@ Plugin 'sjl/gundo.vim'
 "Silver searcher
 Plugin 'rking/ag.vim'
 
+
 call vundle#end()
 
 filetype plugin indent on    " enables filetype detection
 filetype plugin on
 let g:SimpylFold_docstring_preview = 1
 
-"autocomplete
-let g:ycm_autoclose_preview_window_after_completion=1
+"ycm stuff
+"let g:ycm_autoclose_preview_window_after_completion=1
+"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+
+set clipboard=unnamed
+
 
 "Powerline Stuff
 set guifont=Inconsolata\ for\ Powerline:h15
@@ -64,13 +63,19 @@ let g:Powerline_symbols = 'fancy'
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
 set laststatus=2 
-"set term=xterm-256color
-"set termencoding=utf-8
+set term=xterm-256color
+set termencoding=utf-8
+
+"SplitScreen settings
+set splitbelow
+set splitright
+
 
 "NerdTree Stuff
 map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
@@ -83,33 +88,33 @@ nnoremap L gt
 
 "custom keys
 let mapleader=","
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" toggle gundo
+"toggle gundo
 nnoremap <leader>u :GundoToggle<CR>
 " edit vimrc/zshrc and load vimrc bindings
 nnoremap <leader>ev :vsp $MYVIMRC<CR>
 nnoremap <leader>ez :vsp ~/.zshrc<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
-" save session
+"save session
 nnoremap <leader>s :mksession!<CR>
 " open ag.vim
 nnoremap <leader>a :Ag
+
 " CtrlP settings
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'Ag %s -l --nocolor --hidden -g ""'
+"let g:ctrlp_user_command = 'Ag %s -l --nocolor --hidden -g ""'
 
-
+"Colour schemes
 call togglebg#map("<F5>")
 colorscheme solarized
 "colorscheme zenburn
 "set guifont=Monaco:h14
 
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
 "I don't like swap files
 set noswapfile
+
+set pastetoggle=<F2>  "Paste toggle
 
 "UI Config
 set nu 			"turn on numbering
@@ -130,10 +135,11 @@ nnoremap <leader><space> :nohlsearch<CR>
 set foldenable          " enable folding
 set foldlevelstart=10   " open most folds by default
 set foldnestmax=10      " 10 nested fold max
+"space open/closes folds
+nnoremap <space> za 	
+
 "Folding based on indentation:
 autocmd FileType python set foldmethod=indent
-" space open/closes folds
-nnoremap <space> za
 
 "Movement
 " move vertically by visual line
@@ -142,7 +148,17 @@ nnoremap k gk
 " highlight last inserted text
 nnoremap gV `[v`]
 
-"------------Start Python PEP 8 stuff----------------
+"Syntastic stuff
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+
+"------------Python PEP 8 stuff Start----------------
 " Number of spaces that a pre-existing tab is equal to.
 au BufRead,BufNewFile *py,*pyw,*.c,*.h set tabstop=4
 
@@ -180,12 +196,10 @@ set backspace=indent,eol,start
 
 autocmd BufEnter *.md setlocal ft=markdown
 
-"----------Stop python PEP 8 stuff--------------
+"----------python PEP 8 stuff END--------------
 
 "js stuff"
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-
-let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 
 "Tmux Stuff
 " allows cursor change in tmux mode
