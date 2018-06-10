@@ -27,7 +27,9 @@ Plugin 'scrooloose/syntastic'
 "Plugin 'klen/python-mode'
 "Plugin 'klen/rope-vim'
 "Plugin 'davidhalter/jedi-vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
+
 ""code folding
 Plugin 'tmhedberg/SimpylFold'
 
@@ -42,6 +44,9 @@ Plugin 'sjl/gundo.vim'
 "Silver searcher
 Plugin 'rking/ag.vim'
 
+"Go Plugin for vim
+Plugin 'fatih/vim-go'
+
 
 call vundle#end()
 
@@ -50,9 +55,9 @@ filetype plugin on
 let g:SimpylFold_docstring_preview = 1
 
 "ycm stuff
-"let g:ycm_autoclose_preview_window_after_completion=1
-"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-"let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 
 set clipboard=unnamed
 
@@ -108,6 +113,7 @@ let g:ctrlp_working_path_mode = 0
 "Colour schemes
 call togglebg#map("<F5>")
 colorscheme solarized
+set background=dark
 "colorscheme zenburn
 "set guifont=Monaco:h14
 
