@@ -90,6 +90,11 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 nnoremap <C-c> :tabclose<CR>
 nnoremap H gT
 nnoremap L gt
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 
 "custom keys
 let mapleader=","
