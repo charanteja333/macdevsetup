@@ -166,8 +166,9 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 1
+let g:syntastic_python_checkers = ['pep8']
 
 "------------Python PEP 8 stuff Start----------------
 " Number of spaces that a pre-existing tab is equal to.
