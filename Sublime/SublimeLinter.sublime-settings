@@ -1,0 +1,15 @@
+// SublimeLinter Settings - User
+{
+    "linters": {
+        "flake8": {
+            "@disable": false,
+            "args": [],
+            "builtins": "",
+            "excludes": [],
+            "ignore": "",
+            "max-complexity": 10,
+            "max-line-length": null,
+            "select": ""
+        }
+    }
+}
