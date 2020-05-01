@@ -27,7 +27,7 @@ Plugin 'scrooloose/syntastic'
 "Plugin 'klen/python-mode'
 "Plugin 'klen/rope-vim'
 "Plugin 'davidhalter/jedi-vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 
 ""code folding
@@ -87,6 +87,8 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 " Tab navigation like chrome.
 nnoremap <C-t>     :tabnew<CR>
 inoremap <C-t>     <Esc>:tabnew<CR>
+" Remap escape
+inoremap jk <Esc>
 nnoremap <C-c> :tabclose<CR>
 nnoremap H gT
 nnoremap L gt
@@ -94,7 +96,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-
 
 "custom keys
 let mapleader=","
@@ -128,12 +129,14 @@ set noswapfile
 set pastetoggle=<F2>  "Paste toggle
 
 "UI Config
+set ttyfast             "For Vim fast scrolling
 set nu 			"turn on numbering
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 set wildmenu            " visual autocomplete for command menu
 set lazyredraw          " redraw only when we need to.
 set showmatch           " highlight matching [{()}]
+set colorcolumn=80
 
 "Searching
 set ignorecase 
@@ -210,8 +213,14 @@ autocmd BufEnter *.md setlocal ft=markdown
 
 "----------python PEP 8 stuff END--------------
 
-"js stuff"
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+" Different tab/space stops"
+autocmd Filetype yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype html setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype css setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype scss setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype json setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+autocmd FileType make setlocal noexpandtab
 
 "Tmux Stuff
 " allows cursor change in tmux mode
@@ -222,3 +231,17 @@ else
     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
+"---------Go Stuff--------------------------
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage)
+let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_functions = 1
+"let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+
