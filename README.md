@@ -804,7 +804,6 @@ Here is a quick list of some apps I use.
 - [WireShark](https://www.wireshark.org/download.html) : For analyzing the network data
 - [TunnelBlick](https://tunnelblick.net/downloads.html) : For VPN connectivity
 - [TunnelBear](https://www.tunnelbear.com/download) : Similar to TunnelBlick . But never used it.
-- [RemoteDesktopConnection](https://www.microsoft.com/en-in/download/details.aspx?id=18140) : To access windows machines from mac
 - [OracleVirtualBox](https://www.virtualbox.org/wiki/Downloads) : To create local VM's for testing . **Opensource**
 - [MicrosoftSilverLight](https://www.microsoft.com/getsilverlight/) : Some of the webisites/apps require this extension to be installed
 - [MozillaFirefox](https://www.mozilla.org/en-US/firefox/new/)
@@ -813,7 +812,6 @@ I have few personal apps installed as well for daily use.
 
 - [Kindle](http://www.amazon.com/gp/kindle/mac/download)
 - [Skype](https://www.skype.com/en/download-skype/skype-for-computer/)
-- [GooglePhotos](https://photos.google.com/apps) - To sync photos
 - [Feedly](https://itunes.apple.com/in/app/feedly.-read-more-know-more./id865500966?mt=12) : For daily updates on various topics
 - [VLC Player](http://www.videolan.org/vlc/download-macosx.html)
 - [Steam](http://store.steampowered.com/about/) : For playing games
