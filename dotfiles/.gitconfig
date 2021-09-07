@@ -9,3 +9,5 @@
 	excludesfile = ~/.gitignore
 [push]
 	default = simple
+[pull]
+	rebase = false
