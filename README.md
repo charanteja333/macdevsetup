@@ -797,7 +797,6 @@ Here is a quick list of some apps I use.
 - [Evernote](https://evernote.com/) : Take notes and sync them to the cloud, and have them on all your devices. I use Notes for text that are not be synced . You may also like  [Simplenote](http://simplenote.com/). Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
 - [AdobeReader](http://www.adobe.com/support/downloads/product.jsp?product=10&platform=Macintosh): Though i like preview for document viewing , i prefer using adobe reader for all my PDF docuements . Dont forget to set the default app for PDF files to adobe reader.**Right click on file -> Get info -> Open with **
 - [Slack](https://slack.com/downloads) :  Used in almost all organizations for internal team collobration.
-- [Gitter](https://gitter.im/apps) : Similar to slack.
 - [Mou](http://25.io/mou/) : For writing files in markdown syntax. Similar to simplenote , but i started using this first.
 - [Keka](http://www.kekaosx.com/en/) : Tar/zip file extraction though inbuilt archive utility works
 - [OpenOffice](https://www.openoffice.org/porting/mac/) : If you are editing any microsoft office documents/Ppts . **Open Source**
@@ -805,8 +804,10 @@ Here is a quick list of some apps I use.
 - [TunnelBlick](https://tunnelblick.net/downloads.html) : For VPN connectivity
 - [TunnelBear](https://www.tunnelbear.com/download) : Similar to TunnelBlick . But never used it.
 - [OracleVirtualBox](https://www.virtualbox.org/wiki/Downloads) : To create local VM's for testing . **Opensource**
-- [MicrosoftSilverLight](https://www.microsoft.com/getsilverlight/) : Some of the webisites/apps require this extension to be installed
+- [MicrosoftSilverLight](https://www.microsoft.com/getsilverlight/) : Some of the websites/apps require this extension to be installed
 - [MozillaFirefox](https://www.mozilla.org/en-US/firefox/new/)
+- [Docker](https://docs.docker.com/desktop/mac/install/)
+- [Postman](https://www.postman.com/downloads/)
 
 I have few personal apps installed as well for daily use.
 
@@ -815,7 +816,11 @@ I have few personal apps installed as well for daily use.
 - [Feedly](https://itunes.apple.com/in/app/feedly.-read-more-know-more./id865500966?mt=12) : For daily updates on various topics
 - [VLC Player](http://www.videolan.org/vlc/download-macosx.html)
 - [Steam](http://store.steampowered.com/about/) : For playing games
-- [WhatsApp](https://www.whatsapp.com/download/) :  For whatsapp usage
-
-
-
+- [WhatsApp](https://www.whatsapp.com/download/)
+- [Discord](https://discord.com/)
+- [Teams](https://www.microsoft.com/en-in/microsoft-teams/group-chat-software)
+- [Spark](https://sparkmailapp.com/)
+- [Telegram](https://telegram.org/)
+- [Spotify](https://www.spotify.com/us/download/mac/)
+- [Grammarly](https://www.grammarly.com/)
+- [VsCode](https://code.visualstudio.com/download)
